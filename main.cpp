@@ -36,7 +36,7 @@ int main() {
     int dishPrice, quantity;
     cout << "Введите цену блюда и количество: ";
    cin >> dishPrice >> quantity;
-if (dishPrice < 0) {
+if (dishPrice < 0 || quantity < 0) {
 cout << "Ошибка: стоимость не может быть меньше нуля!" << endl;
 return 1;
 }
@@ -48,7 +48,7 @@ return 1;
     int a, b, c;
     cout << "Введите цены трёх блюд: ";
     cin >> a >> b >> c;
-if (a < 0 b < 0 c < 0) {
+if (a < 0 || b < 0 || c < 0) {
 cout << "Ошибка: стоимость не может быть меньше нуля!" << endl;
 return 1;
 }
