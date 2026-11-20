@@ -47,13 +47,21 @@ return 1;
 
     int a, b, c;
     cout << "Введите цены трёх блюд: ";
-    if (!(cin >> a >> b >> c)) return 0;
+    cin >> a >> b >> c;
+if (a < 0 b < 0 c < 0) {
+cout << "Ошибка: стоимость не может быть меньше нуля!" << endl;
+return 1;
+}
     cout << "Сумма двух блюд: " << bill(a, b) << endl;
     cout << "Сумма трёх блюд: " << bill(a, b, c) << endl;
 
     int price, cups;
     cout << "Введите цену чая и количество чашек: ";
-    if (!(cin >> price >> cups)) return 0;
+    cin >> price >> cups;
+if (price < 0 || cups < 0) {
+cout << "Ошибка: стоимость и количество не могут быть меньше нуля!" << endl;
+return 1;
+}
     cout << "Одна чашка чая: " << teaCost(price) << endl;
     cout << "Несколько чашек чая: " << teaCost(price, cups) << endl;
     return 0;
