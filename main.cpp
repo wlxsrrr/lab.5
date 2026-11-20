@@ -35,7 +35,11 @@ int teaCost(int price, int cups = 1) {
 int main() {
     int dishPrice, quantity;
     cout << "Введите цену блюда и количество: ";
-    if (!(cin >> dishPrice >> quantity)) return 0;
+   cin >> dishPrice >> quantity;
+if (dishPrice < 0) {
+cout << "Ошибка: стоимость не может быть меньше нуля!" << endl;
+return 1;
+}
     int total = lunchCost(dishPrice, quantity);
     cout << "Стоимость блюд: " << total << endl;
     addTip(total);
